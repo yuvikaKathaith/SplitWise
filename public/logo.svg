@@ -1,0 +1,10 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background: black rounded square -->
+  <rect width="512" height="512" rx="90" fill="black" />
+
+  <!-- Top stroke: width 240, height 60, centered -->
+  <rect x="136" y="160" width="240" height="60" transform="rotate(45 136 160)" fill="#F5E7CE" />
+
+  <!-- Bottom stroke: width 240, height 60, centered and above base -->
+  <rect x="136" y="340" width="240" height="60" transform="rotate(45 136 340)" fill="#F5E7CE" />
+</svg>

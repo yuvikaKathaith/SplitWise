@@ -1,70 +1,18 @@
-// src/App.jsx
-import React, { useState } from "react";
-import TransactionInput from "./Components/TransactionInput.jsx";
-import TransactionList from "./Components/TransactionList.jsx";
-import SettlementResult from "./Components/SettlementResult.jsx";
+import { Routes, Route } from "react-router-dom";
+import Header from "./Components/Header.jsx";
+import Home from "./Components/Hero.jsx";
+import SettlementPage from "./Components/SettlementPage.jsx";
 
-function App() {
-  const [transactions, setTransactions] = useState([]);
-  const [result, setResult] = useState("");
-
-  const addTransaction = (payer, receiver, amount) => {
-    const newTransaction = [payer.trim(), receiver.trim(), Number(amount)];
-    setTransactions([...transactions, newTransaction]);
-  };
-
-  const handleSettleDebts = () => {
-    const net = {};
-
-    for (const [payer, receiver, amount] of transactions) {
-      net[payer] = (net[payer] || 0) - amount;
-      net[receiver] = (net[receiver] || 0) + amount;
-    }
-
-    const balances = [];
-    for (const person in net) {
-      if (net[person] !== 0) {
-        balances.push([net[person], person]);
-      }
-    }
-
-    balances.sort((a, b) => a[0] - b[0]);
-
-    let left = 0;
-    let right = balances.length - 1;
-    const resultLines = [];
-    let transactionCount = 0;
-
-    while (left < right) {
-      let [debitAmount, debtor] = balances[left];
-      let [creditAmount, creditor] = balances[right];
-
-      const settleAmount = Math.min(-debitAmount, creditAmount);
-      resultLines.push(`${debtor} pays ${creditor} ₹${settleAmount}`);
-      transactionCount++;
-
-      debitAmount += settleAmount;
-      creditAmount -= settleAmount;
-
-      if (debitAmount === 0) left++;
-      else balances[left][0] = debitAmount;
-
-      if (creditAmount === 0) right--;
-      else balances[right][0] = creditAmount;
-    }
-
-    const finalResult = `Minimum transactions required: ${transactionCount}\n${resultLines.join("\n")}`;
-    setResult(finalResult);
-  };
-
+const App = () => {
   return (
-    <div style={{ padding: "30px", fontFamily: "Arial" }}>
-      <h2>Debt Settlement App</h2>
-      <TransactionInput addTransaction={addTransaction} settleDebts={handleSettleDebts} />
-      <TransactionList transactions={transactions} />
-      <SettlementResult result={result} />
+    <div style={{ fontFamily: "Arial" }}>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/settle" element={<SettlementPage />} />
+      </Routes>
     </div>
   );
-}
+};
 
 export default App;
