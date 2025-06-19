@@ -21,7 +21,7 @@ const Header = () => {
         <a href="/reviews">reviews</a>
         <a href="/blog">blog</a>
         <a href="/contact">contact us</a>
-        <button className="ml-4 border border-black/20 px-7 py-2 rounded-md hover:bg-black/5 transition">
+        <button className="ml-4 bg-[#ff955b] px-7 py-2 rounded-md hover:bg-[#ff9f6c] text-white transition">
           Login
         </button>
       </nav>
