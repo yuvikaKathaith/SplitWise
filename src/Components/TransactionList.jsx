@@ -1,4 +1,3 @@
-// src/Components/TransactionList.jsx
 import React from "react";
 
 function TransactionList({ transactions }) {

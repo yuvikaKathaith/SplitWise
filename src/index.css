@@ -1,9 +1,10 @@
 @import "tailwindcss";
 
 #root {
-  background: linear-gradient(135deg, #f6e2c0 0%, #f3d9b0 100%);
+  background: linear-gradient(180deg, #f3c7ab 0%, #fce3c0 100%);
   min-height: 100vh;
 }
+
 body::-webkit-scrollbar {
   display: none;
 }
