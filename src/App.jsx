@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Header from "./Components/Header.jsx";
-import Home from "./Components/Hero.jsx";
+import Home from "./Components/Home.jsx";
 import SettlementPage from "./Components/SettlementPage.jsx";
 import About from "./Components/About.jsx";
 import Contact from "./Components/Contact.jsx";
