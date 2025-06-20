@@ -6,7 +6,6 @@ const Hero = () => {
   return (
     <section className="bg-gradient-to-br flex items-center justify-center max-h-screen">
       <div className="flex flex-col md:flex-row items-center justify-center max-w-7xl w-full">
-
         <div className="max-w-xl text-center md:text-left ml-10">
           <h1 className="text-7xl font-medium text-black leading-tight">
             Take Control <br />
@@ -26,10 +25,9 @@ const Hero = () => {
               onClick={() => navigate("/about")} 
               className="bg-[#ff7a30] px-5 py-2 rounded-md text-sm text-white hover:bg-[#ff9f6c]">
               Learn More
-            </button>
+            </button> 
           </div>
         </div>
-        {/* hero img */}
         <div className="mr-2">
           <img
             src="/hero.png"
