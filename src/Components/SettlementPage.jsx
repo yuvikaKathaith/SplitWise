@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import TransactionInput from "./TransactionInput";
 import TransactionList from "./TransactionList";
 import SettlementResult from "./SettlementResult";
+import { ListChecks, Info } from "lucide-react";
 
 const SettlementPage = () => {
   const [transactions, setTransactions] = useState([]);
@@ -59,15 +60,42 @@ const SettlementPage = () => {
   };
 
   return (
-    <div className="p-8">
-      <h2 className="text-2xl font-semibold mb-4">Debt Settlement App</h2>
-      <TransactionInput
-        addTransaction={addTransaction}
-        settleDebts={handleSettleDebts}
-      />
-      <TransactionList transactions={transactions} />
-      <SettlementResult result={result} />
-    </div>
+    <section className="min-h-screen px-6 py-12 md:px-20 text-[#1f1f1f]">
+      <div className="max-w-5xl mx-auto">
+        <p className="text-center text-gray-700 text-lg mb-10 max-w-3xl mx-auto">
+          Easily track expenses and settle debts with minimal transactions. Simple, smart, and efficient.
+        </p>
+
+        <div className="rounded-2xl shadow-sm p-6 md:p-8 bg-[#f8ede8] mb-6">
+          <div className="flex items-center justify-center mb-4">
+            <Info className="w-6 h-6 text-[#ff7a30] mr-2" />
+            <h3 className="text-2xl font-semibold text-[#ff7a30] text-center">Add Transactions</h3>
+          </div>
+          <TransactionInput
+            addTransaction={addTransaction}
+            settleDebts={handleSettleDebts}
+          />
+        </div>
+
+        <div className="rounded-2xl shadow-sm p-6 md:p-8 bg-[#f8ede8] mb-6">
+          <div className="flex items-center justify-center mb-4">
+            <ListChecks className="w-6 h-6 text-[#ff7a30] mr-2" />
+            <h3 className="text-2xl font-semibold text-[#ff7a30] text-center">Transactions</h3>
+          </div>
+          <TransactionList transactions={transactions} />
+        </div>
+
+        {result && (
+          <div className="rounded-2xl shadow-sm p-6 md:p-8 bg-[#f8ede8]">
+            <div className="flex items-center justify-center mb-4">
+              <ListChecks className="w-6 h-6 text-[#ff7a30] mr-2" />
+              <h3 className="text-2xl font-semibold text-[#ff7a30] text-center">Settlement Result</h3>
+            </div>
+            <SettlementResult result={result} />
+          </div>
+        )}
+      </div>
+    </section>
   );
 };
 
