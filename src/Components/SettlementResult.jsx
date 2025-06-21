@@ -1,12 +1,13 @@
-// src/Components/SettlementResult.jsx
 import React from "react";
 
-function SettlementResult({ result }) {
+const SettlementResult = ({ result }) => {
+  if (!result) return <p className="text-gray-500">No settlement calculated yet.</p>;
+
   return (
-    <pre style={{ marginTop: "20px", fontWeight: "bold", whiteSpace: "pre-wrap" }}>
+    <div className="text-left max-w-md mx-auto whitespace-pre-wrap font-medium text-gray-800">
       {result}
-    </pre>
+    </div>
   );
-}
+};
 
 export default SettlementResult;
