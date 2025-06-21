@@ -4,6 +4,7 @@ import { MessageCircle, Mail, Phone } from "lucide-react";
 const Contact = () => {
   return (
     <section className="max-h-screen px-6 py-16 text-center text-[#1f1f1f]">
+    <section className="max-h-screen px-6 py-16 text-center text-[#1f1f1f]">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
           We are here for you, <br />
