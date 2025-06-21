@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const Hero = () => {
+const Home = () => {
   const navigate = useNavigate();
   return (
     <section className="bg-gradient-to-br flex items-center justify-center max-h-screen">
@@ -22,12 +22,15 @@ const Hero = () => {
               Get Started
             </button>
             <button
-              onClick={() => navigate("/about")} 
-              className="bg-[#ff7a30] px-5 py-2 rounded-md text-sm text-white hover:bg-[#ff9f6c]">
+              onClick={() => navigate("/about")}
+              className="bg-[#ff7a30] px-5 py-2 rounded-md text-sm text-white hover:bg-[#ff9f6c]"
+            >
               Learn More
-            </button> 
+            </button>
           </div>
         </div>
+
+        {/* hero img */}
         <div className="mr-2">
           <img
             src="/hero.png"
@@ -41,4 +44,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Home;
