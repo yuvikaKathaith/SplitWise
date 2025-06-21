@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="space-y-3">
             <div className="flex items-center gap-2 mb-2">
               <img src="/logo.svg" alt="Splitwise Logo" className="h-8 w-8" />
-              <h1 className="text-2xl font-bold text-black">Splitwise</h1>
+              <h1 className="text-2xl font-bold text-black">SplitWise</h1>
             </div>
             <p className="text-gray-700 font-medium">
               We're on a mission to make group expense <br />
