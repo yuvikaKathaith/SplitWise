@@ -1,7 +1,6 @@
-// src/Components/TransactionInput.jsx
 import React, { useState } from "react";
 
-function TransactionInput({ addTransaction, settleDebts }) {
+const TransactionInput = ({ addTransaction, settleDebts }) => {
   const [payer, setPayer] = useState("");
   const [receiver, setReceiver] = useState("");
   const [amount, setAmount] = useState("");
@@ -19,36 +18,49 @@ function TransactionInput({ addTransaction, settleDebts }) {
   };
 
   return (
-    <div>
-      <input
-        type="text"
-        placeholder="Payer"
-        value={payer}
-        onChange={(e) => setPayer(e.target.value)}
-        style={{ margin: "5px" }}
-      />
-      <input
-        type="text"
-        placeholder="Receiver"
-        value={receiver}
-        onChange={(e) => setReceiver(e.target.value)}
-        style={{ margin: "5px" }}
-      />
-      <input
-        type="number"
-        placeholder="Amount"
-        value={amount}
-        onChange={(e) => setAmount(e.target.value)}
-        style={{ margin: "5px" }}
-      />
-      <button onClick={handleAdd} style={{ margin: "5px" }}>
-        Add Transaction
-      </button>
-      <button onClick={settleDebts} style={{ margin: "5px" }}>
-        Settle Debts
-      </button>
+    <div className="space-y-4">
+      <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
+        <input
+          type="text"
+          placeholder="Payer"
+          value={payer}
+          onChange={(e) => setPayer(e.target.value)}
+          className="px-4 py-2 border border-gray-300 rounded-md w-full md:w-1/4"
+        />
+        <input
+          type="text"
+          placeholder="Receiver"
+          value={receiver}
+          onChange={(e) => setReceiver(e.target.value)}
+          className="px-4 py-2 border border-gray-300 rounded-md w-full md:w-1/4"
+        />
+        <input
+          type="number"
+          placeholder="Amount"
+          value={amount}
+          onChange={(e) => setAmount(e.target.value)}
+          className="px-4 py-2 border border-gray-300 rounded-md w-full md:w-1/4"
+        />
+      </div>
+
+      <div className="flex gap-4 justify-center">
+        <button
+          onClick={handleAdd}
+          className="bg-[#ff7a30] hover:bg-[#ff9d69] text-white py-2 px-6 rounded-full"
+        >
+          Add Transaction
+        </button>
+        <button
+          onClick={settleDebts}
+          className="bg-[#000] hover:bg-gray-900 text-white py-2 px-6 rounded-full"
+        >
+          Settle Debts
+        </button>
+      </div>
     </div>
   );
-}
+};
 
 export default TransactionInput;
+
+
