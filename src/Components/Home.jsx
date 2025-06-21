@@ -22,12 +22,15 @@ const Home = () => {
               Get Started
             </button>
             <button
-              onClick={() => navigate("/about")} 
-              className="bg-[#ff7a30] px-5 py-2 rounded-md text-sm text-white hover:bg-[#ff9f6c]">
+              onClick={() => navigate("/about")}
+              className="bg-[#ff7a30] px-5 py-2 rounded-md text-sm text-white hover:bg-[#ff9f6c]"
+            >
               Learn More
-            </button> 
+            </button>
           </div>
         </div>
+
+        {/* hero img */}
         <div className="mr-2">
           <img
             src="/hero.png"
