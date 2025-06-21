@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const Hero = () => {
+const Home = () => {
   const navigate = useNavigate();
   return (
     <section className="bg-gradient-to-br flex items-center justify-center max-h-screen">
@@ -43,4 +43,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Home;
