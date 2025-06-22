@@ -25,7 +25,9 @@ const Contact = () => {
               Start chat →
             </button>
           </div>
-          <div className="bg-[#f8ede8] rounded-xl p-6 shadow-md">
+
+<div className="bg-[#f8ede8] rounded-xl p-6 shadow-md">
+
             <div className="flex justify-center mb-4">
               <div className="bg-[#f3e9fe] p-3 rounded-full">
                 <Mail className="text-[#a066d6]" />
