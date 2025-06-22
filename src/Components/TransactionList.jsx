@@ -19,6 +19,7 @@ const TransactionList = ({ transactions }) => {
         ))}
       </ul>
     </div>
+    
   );
 };
 export default TransactionList;
