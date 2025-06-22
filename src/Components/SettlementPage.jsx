@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import TransactionInput from "./TransactionInput";
 import TransactionList from "./TransactionList";
 import SettlementResult from "./SettlementResult";
+import { ListChecks, Info } from "lucide-react";
 
 const SettlementPage = () => {
   const [transactions, setTransactions] = useState([]);
