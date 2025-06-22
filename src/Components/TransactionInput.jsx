@@ -52,7 +52,7 @@ const TransactionInput = ({ addTransaction, settleDebts }) => {
         </button>
         <button
           onClick={settleDebts}
-          className="bg-[#000] hover:bg-gray-900 text-white py-2 px-6 rounded-full"
+          className="bg-[#4a6fdc] hover:bg-[#6d89f0] text-white py-2 px-6 rounded-full"
         >
           Settle Debts
         </button>
