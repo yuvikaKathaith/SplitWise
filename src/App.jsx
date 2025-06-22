@@ -4,6 +4,7 @@ import Home from "./Components/Home.jsx";
 import SettlementPage from "./Components/SettlementPage.jsx";
 import About from "./Components/About.jsx";
 import Contact from "./Components/Contact.jsx";
+import Footer from "./Components/Footer.jsx";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <Footer />
     </div>
   );
 };

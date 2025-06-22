@@ -9,6 +9,8 @@ const TransactionList = ({ transactions }) => {
   return (
     <div>
       <h3 className="text-xl font-semibold mb-4 text-[#ff7a30]">Transactions</h3>
+      <ul className="space-y-2 text-gray-700 text-left max-w-md mx-auto"></ul>
+      <h3 className="text-xl font-semibold mb-4 text-[#ff7a30]">Transactions</h3>
       <ul className="space-y-2 text-gray-700 text-left max-w-md mx-auto">
         {transactions.map(([payer, receiver, amount], index) => (
           <li key={index}>
@@ -17,7 +19,8 @@ const TransactionList = ({ transactions }) => {
         ))}
       </ul>
     </div>
+    
   );
 };
-
 export default TransactionList;
+

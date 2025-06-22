@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 const TransactionInput = ({ addTransaction, settleDebts }) => {
+const TransactionInput = ({ addTransaction, settleDebts }) => {
   const [payer, setPayer] = useState("");
   const [receiver, setReceiver] = useState("");
   const [amount, setAmount] = useState("");
@@ -59,6 +60,7 @@ const TransactionInput = ({ addTransaction, settleDebts }) => {
       </div>
     </div>
   );
+};
 };
 
 export default TransactionInput;
