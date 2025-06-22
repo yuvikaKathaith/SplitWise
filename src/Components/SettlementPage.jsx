@@ -15,7 +15,6 @@ const SettlementPage = () => {
 
   const handleSettleDebts = () => {
     const net = {};
-
     for (const [payer, receiver, amount] of transactions) {
       net[payer] = (net[payer] || 0) - amount;
       net[receiver] = (net[receiver] || 0) + amount;
@@ -29,9 +28,7 @@ const SettlementPage = () => {
     }
 
     balances.sort((a, b) => a[0] - b[0]);
-
-    let left = 0;
-    let right = balances.length - 1;
+    let left = 0, right = balances.length - 1;
     const resultLines = [];
     let transactionCount = 0;
 
@@ -53,9 +50,7 @@ const SettlementPage = () => {
       else balances[right][0] = creditAmount;
     }
 
-    const finalResult = `Minimum transactions required: ${transactionCount}\n${resultLines.join(
-      "\n"
-    )}`;
+    const finalResult = `Minimum transactions required: ${transactionCount}\n${resultLines.join("\n")}`;
     setResult(finalResult);
   };
 

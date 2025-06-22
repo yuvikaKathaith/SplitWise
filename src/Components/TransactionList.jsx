@@ -10,6 +10,8 @@ const TransactionList = ({ transactions }) => {
     <div>
       <h3 className="text-xl font-semibold mb-4 text-[#ff7a30]">Transactions</h3>
       <ul className="space-y-2 text-gray-700 text-left max-w-md mx-auto">
+      <h3 className="text-xl font-semibold mb-4 text-[#ff7a30]">Transactions</h3>
+      <ul className="space-y-2 text-gray-700 text-left max-w-md mx-auto">
         {transactions.map(([payer, receiver, amount], index) => (
           <li key={index}>
             {toCamelCase(payer)} pays {toCamelCase(receiver)} ₹{amount}
@@ -19,5 +21,7 @@ const TransactionList = ({ transactions }) => {
     </div>
   );
 };
+};
 
 export default TransactionList;
+
